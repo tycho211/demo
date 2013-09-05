@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time_start: MyString
+  time_end: MyString
+  address: MyString
+  geo_start: MyString
+  geo_radius: MyString
+  keyword: MyText
+  twitter: false
+  foursquare: false
+  instagram: false
+
+two:
+  time_start: MyString
+  time_end: MyString
+  address: MyString
+  geo_start: MyString
+  geo_radius: MyString
+  keyword: MyText
+  twitter: false
+  foursquare: false
+  instagram: false

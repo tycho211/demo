@@ -1,0 +1,62 @@
+<div class="page-header">
+  <h2> All requests </h2> 
+  <%= link_to 'Add a New request', new_request_path, class: "btn btn-primary" %>
+</div>
+
+
+<% @requests.each do |request| %>
+<div class="request">
+  <strong><%= request.name %></strong>
+  <p><%= request.address %></p> 
+  <div class="meta">
+    <p><%= link_to"This request was added to Sunshine " + time_ago_in_words(request.created_at) + " ago", request%></p>
+    <%= link_to "Show", request %> |
+    <span class="admin">
+      <%= link_to "Edit", edit_request_path(request) %> |
+      <%= link_to "Delete", request, method: :delete, data: {confirm: "Do you REALLY want to delete this request?!?"} %>
+    </span>
+  </div>
+</div>
+<% end %>
+
+
+
+<!--<h1>Listing requests</h1>
+
+<table>
+  <tr>
+    <th>Time start</th>
+    <th>Time end</th>
+    <th>Address</th>
+    <th>Geo start</th>
+    <th>Geo radius</th>
+    <th>Keyword</th>
+    <th>Twitter</th>
+    <th>Foursquare</th>
+    <th>Instagram</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @requests.each do |request| %>
+  <tr>
+    <td><%= request.time_start %></td>
+    <td><%= request.time_end %></td>
+    <td><%= request.address %></td>
+    <td><%= request.geo_start %></td>
+    <td><%= request.geo_radius %></td>
+    <td><%= request.keyword %></td>
+    <td><%= request.twitter %></td>
+    <td><%= request.foursquare %></td>
+    <td><%= request.instagram %></td>
+    <td><%= link_to 'Show', request %></td>
+    <td><%= link_to 'Edit', edit_request_path(request) %></td>
+    <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Request', new_request_path %>

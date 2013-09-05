@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h2> All Voters </h2> 
+  <%= link_to 'Add a New Voter', new_voter_path, class: "btn btn-primary" %>
+</div>
+
+
+<% @voters.each do |voter| %>
+<div class="voter">
+  <strong><%= voter.name %></strong>
+  <p><%= voter.address %></p> 
+  <div class="meta">
+    <p><%= link_to"This voter was added to Sunshine " + time_ago_in_words(voter.created_at) + " ago", voter%></p>
+    <%= link_to "Show", voter %> |
+    <span class="admin">
+      <%= link_to "Edit", edit_voter_path(voter) %> |
+      <%= link_to "Delete", voter, method: :delete, data: {confirm: "Do you REALLY want to delete this voter?!?"} %>
+    </span>
+  </div>
+</div>
+<% end %>
+

@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h2> All volunteers </h2> 
+  <%= link_to 'Add a New volunteer', new_volunteer_path, class: "btn btn-primary" %>
+</div>
+
+
+<% @volunteers.each do |volunteer| %>
+<div class="volunteer">
+  <strong><%= volunteer.name %></strong>
+  <p><%= volunteer.address %></p> 
+  <div class="meta">
+    <p><%= link_to"This volunteer was added to Sunshine " + time_ago_in_words(volunteer.created_at) + " ago", volunteer%></p>
+    <%= link_to "Show", volunteer %> |
+    <span class="admin">
+      <%= link_to "Edit", edit_volunteer_path(volunteer) %> |
+      <%= link_to "Delete", volunteer, method: :delete, data: {confirm: "Do you REALLY want to delete this volunteer?!?"} %>
+    </span>
+  </div>
+</div>
+<% end %>

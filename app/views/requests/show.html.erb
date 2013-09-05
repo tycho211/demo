@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time start:</b>
+  <%= @request.time_start %>
+</p>
+
+<p>
+  <b>Time end:</b>
+  <%= @request.time_end %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @request.address %>
+</p>
+
+<p>
+  <b>Geo start:</b>
+  <%= @request.geo_start %>
+</p>
+
+<p>
+  <b>Geo radius:</b>
+  <%= @request.geo_radius %>
+</p>
+
+<p>
+  <b>Keyword:</b>
+  <%= @request.keyword %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @request.twitter %>
+</p>
+
+<p>
+  <b>Foursquare:</b>
+  <%= @request.foursquare %>
+</p>
+
+<p>
+  <b>Instagram:</b>
+  <%= @request.instagram %>
+</p>
+
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

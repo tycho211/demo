@@ -1,0 +1,53 @@
+<%= form_for(@request) do |f| %>
+  <% if @request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
+      <ul>
+      <% @request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time_start %><br />
+    <%= f.text_field :time_start %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end %><br />
+    <%= f.text_field :time_end %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :geo_start %><br />
+    <%= f.text_field :geo_start %>
+  </div>
+  <div class="field">
+    <%= f.label :geo_radius %><br />
+    <%= f.text_field :geo_radius %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword %><br />
+    <%= f.text_area :keyword %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br />
+    <%= f.check_box :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :foursquare %><br />
+    <%= f.check_box :foursquare %>
+  </div>
+  <div class="field">
+    <%= f.label :instagram %><br />
+    <%= f.check_box :instagram %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

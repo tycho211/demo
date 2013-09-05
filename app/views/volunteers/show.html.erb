@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @volunteer.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @volunteer.address %>
+</p>
+
+<p>
+  <b>County:</b>
+  <%= @volunteer.county %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @volunteer.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @volunteer.phone %>
+</p>
+
+<p>
+  <b>Hours total:</b>
+  <%= @volunteer.hours_total %>
+</p>
+
+<p>
+  <b>Hours remaining:</b>
+  <%= @volunteer.hours_remaining %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @volunteer.start_date %>
+</p>
+
+<p>
+  <b>Assigned voters:</b>
+  <%= @volunteer.assigned_voters %>
+</p>
+
+
+<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
+<%= link_to 'Back', volunteers_path %>

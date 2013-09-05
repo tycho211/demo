@@ -1,0 +1,69 @@
+<%= form_for(@voter) do |f| %>
+  <% if @voter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voter.errors.count, "error") %> prohibited this voter from being saved:</h2>
+
+      <ul>
+      <% @voter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br />
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :party_affiliation %><br />
+    <%= f.text_field :party_affiliation %>
+  </div>
+  <div class="field">
+    <%= f.label :voter_registered %><br />
+    <%= f.check_box :voter_registered %>
+  </div>
+  <div class="field">
+    <%= f.label :voter_confirmed %><br />
+    <%= f.check_box :voter_confirmed %>
+  </div>
+  <div class="field">
+    <%= f.label :voter_sentiment %><br />
+    <%= f.text_field :voter_sentiment %>
+  </div>
+  <div class="field">
+    <%= f.label :tweets %><br />
+    <%= f.text_area :tweets %>
+  </div>
+  <div class="field">
+    <%= f.label :foursquare %><br />
+    <%= f.text_area :foursquare %>
+  </div>
+  <div class="field">
+    <%= f.label :eventbrite %><br />
+    <%= f.text_area :eventbrite %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

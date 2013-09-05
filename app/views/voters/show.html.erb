@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @voter.name %>
+</p>
+
+<p>
+  <b>County:</b>
+  <%= @voter.county %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @voter.address %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @voter.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @voter.phone %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @voter.age %>
+</p>
+
+<p>
+  <b>Party affiliation:</b>
+  <%= @voter.party_affiliation %>
+</p>
+
+<p>
+  <b>Voter registered:</b>
+  <%= @voter.voter_registered %>
+</p>
+
+<p>
+  <b>Voter confirmed:</b>
+  <%= @voter.voter_confirmed %>
+</p>
+
+<p>
+  <b>Voter sentiment:</b>
+  <%= @voter.voter_sentiment %>
+</p>
+
+<p>
+  <b>Tweets:</b>
+  <%= @voter.tweets %>
+</p>
+
+<p>
+  <b>Foursquare:</b>
+  <%= @voter.foursquare %>
+</p>
+
+<p>
+  <b>Eventbrite:</b>
+  <%= @voter.eventbrite %>
+</p>
+
+
+<%= link_to 'Edit', edit_voter_path(@voter) %> |
+<%= link_to 'Back', voters_path %>
